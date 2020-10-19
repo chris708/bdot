@@ -1,4 +1,6 @@
 # internal imports
+import time 
+begin = time.time() 
 from bdot import carray_ext
 
 import bdot
@@ -131,3 +133,8 @@ class carray(bcolz.carray):
 
 		else:
 			raise ValueError("Can't create a carray like that. Only one and two dimensions supported.")
+time.sleep(1) 
+
+end = time.time() 
+  
+print(f"Total runtime of the program is {end - begin}") 
